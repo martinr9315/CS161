@@ -1,0 +1,31 @@
+#1 
+Test cases:
+Running (loop for x in '(0 1 2 3 4 5 6 7 8 9 10) collect (PAD x)) outputs (1 1 1 2 2 3 4 5 7 9 12),
+which is the correct 10 first values of the Padovan sequence.
+
+For larger values of N, my PAD function is extremely slow as for every n<N, it must recalculate
+PAD (n) as it goes through the recursion. 
+
+#2
+Test cases:                                                             
+Running (loop for x in '(0 1 2 3 4 5 6 7 8 9 10) collect (SUMS x)) outputs (0 0 0 1 1 2 3 4 6 8 11).
+
+The relationship between the values returned by PAD and SUMS is that SUMS x is always exactly 1
+less than PAD x.
+
+#3
+Test cases:
+> (ANON '42)
+?
+> (ANON 'FOO)
+?
+> (ANON '(((L E) F) T))
+(((? ?) ?) ?) 
+> (ANON '(5 FOO 3.1 -0.2))
+(? ? ? ?) 
+> (ANON '(1 (FOO 3.1) -0.2))
+(? (? ?) ?) 
+> (ANON '(((1 2) (FOO 3.1)) (BAR -0.2)))
+(((? ?) (? ?)) (? ?)) 
+> (ANON '(R (I (G (H T)))))
+(? (? (? (? ?)))) 
